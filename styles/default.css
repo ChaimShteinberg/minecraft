@@ -5,13 +5,12 @@ main{
     grid-template-columns: repeat(auto-fill,48px);
     grid-template-rows: repeat(auto-fill,48px);
 }
-div{
-}
 div:hover{
     border: 1px solid black;
 }
 aside{
     position: absolute;
+    position: fixed;
     top: 10%;
 }
 article{
@@ -49,4 +48,7 @@ article{
 .rocks{
     background: url('../assets/images/stone.webp');
     background-size: contain;
+}
+.tree{
+    background:url('../assets/images/tree.webp') ;
 }

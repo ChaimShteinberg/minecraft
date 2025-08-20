@@ -14,11 +14,11 @@ function ceangeTiles(start, end, typeTile) {
   }
 }
 
-ceangeTiles(2500, 2999, "rocks");
+ceangeTiles(2000, 2999, "rocks");
 
-ceangeTiles(2000, 2499, "dirt");
+ceangeTiles(1000, 1999, "dirt");
 
-treeplace = [1925, 1825, 1725, 1625, 1525, 1950, 1850, 1750, 1650, 1550, 1975, 1875, 1775, 1675, 1575];
+treeplace = [925, 825, 725, 625, 525, 950, 850, 750, 650, 550, 975, 875, 775, 675, 575];
 
 for (let num of treeplace) {
   const tile = document.querySelector(`#tile${num}`);
