@@ -14,7 +14,7 @@ aside{
     position: absolute;
     top: 10%;
 }
-#tool{
+#tools{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,9 +26,27 @@ aside{
     justify-content: space-around;
     width: 80px;
 }
-.axe{}
-.shovel{}
+#axe{
+    background: url('../assets/images/axe.webp');
+     background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 50px;
+    cursor: pointer;
+}
+#shovel{
+    background: url('../assets/images/shovel.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 50px;
+    cursor: pointer;
+}
 .sky{
+    background:  #87CEEB;
+    height: 48px;
+    width: 48px;
 }
 .dirt{
+    background:url('../assets/images/dirt.webp') ;
+    height: 48px;
+    width: 48px;
 }
