@@ -7,18 +7,18 @@ for (let index = 0; index < 3000; index++) {
   main.append(div);
 }
 
-function ceangeTiles(start, end, tile) {
+function ceangeTiles(start, end, typeTile) {
   for (let index = start; index < end + 1; index++) {
     const tile = document.querySelector(`#tile${index}`);
-    tile.classList.replace("sky", tile);
+    tile.classList.replace("sky", typeTile);
   }
 }
 
-ceangeTiles(2501, 3000, "rocks");
+ceangeTiles(2500, 2999, "rocks");
 
-ceangeTiles(2001, 2500, "dirt");
+ceangeTiles(2000, 2599, "dirt");
 
-treeplace = [1925, 1825, 1725, 1625, 1525];
+treeplace = [1925, 1825, 1725, 1625, 1525, 1950, 1850, 1750, 1650, 1550, 1975, 1875, 1775, 1675, 1575];
 
 for (let num of treeplace) {
   const tile = document.querySelector(`#tile${num}`);
