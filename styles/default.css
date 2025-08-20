@@ -46,3 +46,7 @@ article{
     background:url('../assets/images/dirt.webp') ;
     background-size: contain;
 }
+.rocks{
+    background: url('../assets/images/stone.webp');
+    background-size: contain;
+}
