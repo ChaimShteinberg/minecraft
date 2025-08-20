@@ -1,4 +1,6 @@
-const main = document.querySelector("main")
+import { selectTool } from "./tools.js"
+
+export const main = document.querySelector("main")
 
 for (let index = 0; index < 3000; index++) {
     const div = document.createElement("div")
@@ -7,14 +9,9 @@ for (let index = 0; index < 3000; index++) {
     main.append(div)
 }
 
-document.getElementById('axe').addEventListener('click', () => {
-    selectTool('axe');
-});
+const toolsContainer = document.getElementById('tools');
 
-document.getElementById('pickaxe').addEventListener('click', () => {
-    selectTool('pickaxe');
-});
-
-document.getElementById('shovel').addEventListener('click', () => {
-    selectTool('shovel');
+toolsContainer.addEventListener('click', (event) => {
+    const clicked = event.target.id; 
+        selectTool(clicked); 
 });
