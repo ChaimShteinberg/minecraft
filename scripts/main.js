@@ -1,4 +1,5 @@
 import { selectTool } from "./tools.js"
+import { handleMining } from "./tiles.js";
 
 export const main = document.querySelector("main")
 
@@ -33,4 +34,10 @@ const toolsContainer = document.getElementById('tools');
 toolsContainer.addEventListener('click', (event) => {
     const clicked = event.target.id; 
         selectTool(clicked); 
+});
+
+main.addEventListener("click", (event) => {
+  const tile = event.target;
+  if (!tile.classList.contains("tile")) return;
+  handleMining(tile);
 });
