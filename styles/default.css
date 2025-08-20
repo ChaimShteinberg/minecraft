@@ -1,0 +1,52 @@
+main{
+    display: grid;
+    width: 4800px;
+    height: 1440px;
+    grid-template-columns: repeat(auto-fill,48px);
+    grid-template-rows: repeat(auto-fill,48px);
+}
+div{
+}
+div:hover{
+    border: 1px solid black;
+}
+aside{
+    position: absolute;
+    top: 10%;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80px;
+}
+#axe{
+    background: url('../assets/images/axe.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#shovel{
+    background: url('../assets/images/shovel.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#pickaxe{
+    background: url('../assets/images/pickaxe.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.tool{
+    min-height: 50px;
+    cursor: pointer;
+}
+.sky{
+    background:  #87CEEB;
+}
+.dirt{
+    background:url('../assets/images/dirt.webp') ;
+    background-size: contain;
+}
+.rocks{
+    background: url('../assets/images/stone.webp');
+    background-size: contain;
+}
