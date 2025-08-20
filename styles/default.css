@@ -12,6 +12,7 @@ div:hover{
 }
 aside{
     position: absolute;
+    position: fixed;
     top: 10%;
 }
 article{
