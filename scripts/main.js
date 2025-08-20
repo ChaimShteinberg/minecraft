@@ -1,9 +1,10 @@
-import { selectTool } from "./tools.js"
+import { selectTool } from "./tools.js";
 import { handleMining } from "./tiles.js";
+import { placeTile, getInventory } from "./stacks.js";
 
 export const main = document.querySelector("main")
 
-
+let placingType = null;
 
 for (let index = 0; index < 3000; index++) {
   const div = document.createElement("div");
@@ -36,8 +37,21 @@ toolsContainer.addEventListener('click', (event) => {
         selectTool(clicked); 
 });
 
+const stacksContainer = document.getElementById('stacks');
+stacksContainer.addEventListener('click', (event) => {
+    const type = event.target.id; 
+    if (!type || getInventory()[type].length === 0) return;
+    placingType = type;
+});
+
 main.addEventListener("click", (event) => {
-  const tile = event.target;
-  if (!tile.classList.contains("tile")) return;
-  handleMining(tile);
+    const tile = event.target;
+    if (!tile.classList.contains("tile")) return;
+
+    if (placingType) {
+        placeTile(tile, placingType);
+        placingType = null;
+    } else {
+        handleMining(tile);
+    }
 });

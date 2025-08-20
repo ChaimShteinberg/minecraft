@@ -1,10 +1,5 @@
 import { getSelectedTool } from "./tools.js";
-
-const inventory = {
-    tree: [],
-    rocks: [],
-    dirt: []
-};
+import { addToInventory, updateStacksUI } from "./stacks.js";
 
 export function handleMining(tile) {
     const tool = getSelectedTool();
@@ -21,14 +16,7 @@ export function handleMining(tile) {
 }
 
 function removeTile(tile, type) {
-    tile.className = "tile sky"; 
-    inventory[type].push(type);
+    tile.className = "tile sky";
+    addToInventory(type);
     updateStacksUI();
-}
-
-function updateStacksUI() {
-    for (let key in inventory) {
-        const section = document.getElementById(key);
-        section.textContent = inventory[key].length;
-    }
 }
