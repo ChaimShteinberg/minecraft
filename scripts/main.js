@@ -2,15 +2,7 @@ import { selectTool } from "./tools.js"
 
 export const main = document.querySelector("main")
 
-for (let index = 0; index < 3000; index++) {
-    const div = document.createElement("div")
-    div.classList = "tile"
-    div.id = `tile${index}`
-    main.append(div)
-}
 
-
-const main = document.querySelector("main");
 
 for (let index = 0; index < 3000; index++) {
   const div = document.createElement("div");
@@ -30,7 +22,7 @@ ceangeTiles(2000, 2999, "rocks");
 
 ceangeTiles(1000, 1999, "dirt");
 
-treeplace = [925, 825, 725, 625, 525, 950, 850, 750, 650, 550, 975, 875, 775, 675, 575];
+const treeplace = [925, 825, 725, 625, 525, 950, 850, 750, 650, 550, 975, 875, 775, 675, 575];
 
 for (let num of treeplace) {
   const tile = document.querySelector(`#tile${num}`);
