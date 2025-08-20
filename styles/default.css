@@ -30,6 +30,11 @@ article{
     background-size: contain;
     background-repeat: no-repeat;
 }
+#pickaxe{
+    background: url('../assets/images/pickaxe.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .tool{
     min-height: 50px;
     cursor: pointer;
