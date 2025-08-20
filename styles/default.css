@@ -49,3 +49,6 @@ article{
     background: url('../assets/images/stone.webp');
     background-size: contain;
 }
+.tree{
+    background:url('../assets/images/tree.webp') ;
+}
