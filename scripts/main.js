@@ -16,7 +16,7 @@ function ceangeTiles(start, end, typeTile) {
 
 ceangeTiles(2500, 2999, "rocks");
 
-ceangeTiles(2000, 2599, "dirt");
+ceangeTiles(2000, 2499, "dirt");
 
 treeplace = [1925, 1825, 1725, 1625, 1525, 1950, 1850, 1750, 1650, 1550, 1975, 1875, 1775, 1675, 1575];
 
