@@ -1,5 +1,6 @@
 import { getSelectedTool } from "./tools.js";
-import {  updateStacksUI, addToInventory } from "./stacks.js";
+import {  updateStacksUI, addToInventory ,placeTile} from "./stacks.js";
+import { placingType } from "./main.js";
 
 export function handleMining(tile) {
     const tool = getSelectedTool();
@@ -19,4 +20,16 @@ function removeTile(tile, type) {
     tile.className = "tile sky";
     addToInventory(type);
     updateStacksUI();
+}
+
+export function tilesAfterStacks(event){
+     const tile = event.target;
+        if (!tile.classList.contains("tile")) return;
+    
+        if (placingType) {
+            placeTile(tile, placingType);
+            placingType = null;
+        } else {
+            handleMining(tile);
+        }
 }
