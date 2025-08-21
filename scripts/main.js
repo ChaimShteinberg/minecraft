@@ -2,7 +2,7 @@ import { selectTool } from "./tools.js";
 import { selectedTool } from "./tools.js";
 import { handleClick } from "./tiles.js";
 
-export const main = document.querySelector("main");
+const main = document.querySelector("main");
 
 for (let index = 0; index < 3000; index++) {
   const div = document.createElement("div");
