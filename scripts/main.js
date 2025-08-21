@@ -5,9 +5,13 @@ import { selectedTool } from "./tools.js";
 import { handleClick } from "./tiles.js";
 import { start } from "./start.js";
 
-export const main = document.querySelector("main");
+
+export let select = null
+
+const main = document.querySelector("main");
 
 let placingType = null;
+
 start(main)
 
 const toolsContainer = document.getElementById("tools");
@@ -15,6 +19,7 @@ const toolsContainer = document.getElementById("tools");
 toolsContainer.addEventListener("click", (event) => {
   const clicked = event.target.id;
   selectTool(clicked, selectedTool);
+  select = 'tool'
 });
 
 const stacksContainer = document.getElementById('stacks');
