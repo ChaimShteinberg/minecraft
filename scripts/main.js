@@ -5,9 +5,11 @@ import { selectedTool } from "./tools.js";
 import { handleClick } from "./tiles.js";
 import { start } from "./start.js";
 
+
 export const main = document.querySelector("main");
 export let select = null
 export let placingType = null;
+
 start(main)
 
 const toolsContainer = document.getElementById("tools");
