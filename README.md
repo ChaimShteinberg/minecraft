@@ -75,7 +75,9 @@ minecraft-game/
 - מנהל את מלאי המשאבים
 - מעדכן את הממשק כאשר משאבים מתווספים או מוסרים
 - מטפל בהנחת אריחים חדשים
-###תרשים זרימה
+
+
+
 flowchart TD
     A["התחלת המשחק<br/>index.html"] --> B["לחיצה על Start Game"]
     B --> C["מעבר לדף המשחק<br/>game.html"]
@@ -131,14 +133,6 @@ flowchart TD
     M --> N["חזרה למצב המתנה"]
     N --> F
     
-    style A fill:#e1f5fe
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-    style G fill:#f3e5f5
-    style H fill:#f3e5f5
-    style K fill:#ffebee
-    style L fill:#ffebee
-    style M fill:#e0f2f1
 ### tiles.js & tileAfterTool.js & tilesAfterStacks.js
 - מטפלים בלוגיקה של לחיצות על אריחים
 - מבצעים כריית משאבים והנחת אריחים חדשים
