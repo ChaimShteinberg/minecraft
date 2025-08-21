@@ -28,7 +28,6 @@ export function tilesAfterStacks(event) {
 
   if (placingType) {
     placeTile(tile, placingType);
-    // placingType = null;
   } else {
     handleMining(tile);
   }
