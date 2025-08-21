@@ -16,7 +16,6 @@ export function addToInventory(type) {
 export function updateStacksUI() {
   for (let key in inventory) {
     const section = document.getElementById(key);
-    console.log(section)
     section.textContent = inventory[key].length;
   }
 }
