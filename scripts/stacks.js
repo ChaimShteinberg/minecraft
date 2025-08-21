@@ -2,6 +2,7 @@ const inventory = {
   trees: [],
   rocks: [],
   dirt: [],
+  leaves: [],
 };
 
 export function getInventory() {
