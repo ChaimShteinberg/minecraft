@@ -34,6 +34,11 @@ article {
   background-size: contain;
   background-repeat: no-repeat;
 }
+#shears{
+  background: url("../assets/images/shears.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .tool {
   min-height: 50px;
   cursor: pointer;
