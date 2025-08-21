@@ -14,6 +14,9 @@ export function handleMining(tile) {
   if (tool === "shovel" && tile.classList.contains("dirt")) {
     removeTile(tile, "dirt");
   }
+  if (tool === "shears" && tile.classList.contains("dirt")) {
+    removeTile(tile, "leaves");
+  }
 }
 
 function removeTile(tile, type) {

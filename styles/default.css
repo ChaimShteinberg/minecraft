@@ -34,6 +34,11 @@ article {
   background-size: contain;
   background-repeat: no-repeat;
 }
+#shears {
+  background: url("../assets/images/shears.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .tool {
   min-height: 50px;
   cursor: pointer;
@@ -61,6 +66,9 @@ article {
   height: 48px;
   width: 48px;
 }
-.leaves{
-    background: url('../assets/images/leaves.webp');
+.leaves {
+  background: url("../assets/images/leaves.webp");
+
+  height: 48px;
+  width: 48px;
 }

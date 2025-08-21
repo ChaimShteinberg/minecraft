@@ -27,4 +27,12 @@ export function tileAfterTool(e) {
       addToInventory("rocks");
     }
   }
+  if (typeClass.contains("leaves")) {
+    if (selectedTool === "shears") {
+      e.target.classList.replace("leaves", "sky");
+      const stack = document.getElementById("leaves");
+      stack.classList.add("leaves");
+      addToInventory("leaves");
+    }
+  }
 }
