@@ -75,7 +75,70 @@ minecraft-game/
 - מנהל את מלאי המשאבים
 - מעדכן את הממשק כאשר משאבים מתווספים או מוסרים
 - מטפל בהנחת אריחים חדשים
-
+###תרשים זרימה
+flowchart TD
+    A["התחלת המשחק<br/>index.html"] --> B["לחיצה על Start Game"]
+    B --> C["מעבר לדף המשחק<br/>game.html"]
+    
+    C --> D["יצירת הסביבה<br/>start.js"]
+    D --> D1["יצירת 3000 אריחים"]
+    D1 --> D2["הגדרת אריחי שמיים<br/>(0-999)"]
+    D2 --> D3["הגדרת אריחי אדמה<br/>(1000-1999)"]
+    D3 --> D4["הגדרת אריחי סלעים<br/>(2000-2999)"]
+    D4 --> D5["הוספת עצים<br/>במקומות מוגדרים"]
+    
+    D5 --> E["האזנה לאירועים<br/>main.js"]
+    
+    E --> F{"מה נבחר?"}
+    F -->|כלי עבודה| G["selectTool<br/>tools.js"]
+    F -->|פריט מהמלאי| H["בחירת פריט למיקום<br/>stacks.js"]
+    F -->|לחיצה על אריח| I["handleClick<br/>tiles.js"]
+    
+    G --> G1["עדכון selectedTool"]
+    G1 --> G2["select = 'tool'"]
+    
+    H --> H1["בדיקה שיש פריטים במלאי"]
+    H1 --> H2["placingType = type"]
+    H2 --> H3["select = 'stack'"]
+    
+    I --> J{"מה הפעולה?"}
+    J -->|כלי נבחר| K["tileAfterTool<br/>tileAfterTool.js"]
+    J -->|פריט נבחר| L["tilesAfterStacks<br/>tilesAfterStacks.js"]
+    
+    K --> K1{"איזה כלי?"}
+    K1 -->|גרזן + עץ| K2["הסרת עץ<br/>הוספה למלאי"]
+    K1 -->|מכוש + סלע| K3["הסרת סלע<br/>הוספה למלאי"]
+    K1 -->|יעה + אדמה| K4["הסרת אדמה<br/>הוספה למלאי"]
+    
+    L --> L1{"מה לעשות?"}
+    L1 -->|יש placingType| L2["placeTile<br/>מיקום אריח חדש"]
+    L1 -->|אין placingType| L3["handleMining<br/>כרייה עם כלי"]
+    
+    L2 --> L4["בדיקת מלאי"]
+    L4 --> L5["עדכון מראה האריח"]
+    L5 --> L6["הסרה מהמלאי"]
+    L6 --> M["updateStacksUI<br/>עדכון תצוגת המלאי"]
+    
+    L3 --> L7["בדיקת התאמת כלי לאריח"]
+    L7 --> L8["הסרת האריח"]
+    L8 --> L9["addToInventory<br/>הוספה למלאי"]
+    L9 --> M
+    
+    K2 --> M
+    K3 --> M
+    K4 --> M
+    
+    M --> N["חזרה למצב המתנה"]
+    N --> F
+    
+    style A fill:#e1f5fe
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style G fill:#f3e5f5
+    style H fill:#f3e5f5
+    style K fill:#ffebee
+    style L fill:#ffebee
+    style M fill:#e0f2f1
 ### tiles.js & tileAfterTool.js & tilesAfterStacks.js
 - מטפלים בלוגיקה של לחיצות על אריחים
 - מבצעים כריית משאבים והנחת אריחים חדשים
