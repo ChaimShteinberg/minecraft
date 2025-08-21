@@ -1,64 +1,66 @@
-main{
-    display: grid;
-    width: 4800px;
-    height: 1440px;
-    grid-template-columns: repeat(auto-fill,48px);
-    grid-template-rows: repeat(auto-fill,48px);
+main {
+  display: grid;
+  width: 4800px;
+  height: 1440px;
+  grid-template-columns: repeat(auto-fill, 48px);
+  grid-template-rows: repeat(auto-fill, 48px);
 }
-div:hover{
-    border: 1px solid black;
+div:hover {
+  border: 1px solid black;
 }
-aside{
-    position: absolute;
-    position: fixed;
-    top: 10%;
+aside {
+  position: absolute;
+  position: fixed;
+  top: 10%;
 }
-article{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 80px;
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80px;
 }
-#axe{
-    background: url('../assets/images/axe.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
+#axe {
+  background: url("../assets/images/axe.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-#shovel{
-    background: url('../assets/images/shovel.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
+#shovel {
+  background: url("../assets/images/shovel.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-#pickaxe{
-    background: url('../assets/images/pickaxe.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
+#pickaxe {
+  background: url("../assets/images/pickaxe.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.tool{
-    min-height: 50px;
-    cursor: pointer;
+.tool {
+  min-height: 50px;
+  cursor: pointer;
 }
-.sky{
-    background:  #87CEEB;
+.sky {
+  background: #87ceeb;
 }
-.dirt{
-    background:url('../assets/images/dirt.webp') ;
-    height: 48px;
-    width: 48px;
-    background-size: contain;
+.dirt {
+  background: url("../assets/images/dirt.webp");
+  height: 48px;
+  width: 48px;
+  background-size: contain;
 }
-.rocks{
-    background: url('../assets/images/stone.webp');
+.rocks {
+  background: url("../assets/images/stone.webp");
 
-     height: 48px;
-width: 48px;
+  height: 48px;
+  width: 48px;
 
-    background-size: contain;
+  background-size: contain;
 }
-.tree{
-    background:url('../assets/images/tree.webp') ;
+.trees {
+  background: url("../assets/images/tree.webp");
 
-     height: 48px;
-    width: 48px;
+  height: 48px;
+  width: 48px;
 }
-
+.leaves{
+    background: url('../assets/images/leaves.webp');
+}

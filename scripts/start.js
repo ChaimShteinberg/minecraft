@@ -1,5 +1,4 @@
 export function start(main) {
-
   for (let index = 0; index < 3000; index++) {
     const div = document.createElement("div");
     div.classList.add("tile", "sky");
@@ -24,6 +23,6 @@ export function start(main) {
 
   for (let num of treeplace) {
     const tile = document.querySelector(`#tile${num}`);
-    tile.classList.replace("sky", "tree");
+    tile.classList.replace("sky", "trees");
   }
 }

@@ -8,24 +8,23 @@ export function tileAfterTool(e) {
       e.target.classList.replace("dirt", "sky");
       const stack = document.getElementById("dirt");
       stack.classList.add("dirt");
-      addToInventory('dirt')
+      addToInventory("dirt");
     }
   }
-  if (typeClass.contains("tree")) {
+  if (typeClass.contains("trees")) {
     if (selectedTool === "axe") {
-      e.target.classList.replace("tree", "sky");
+      e.target.classList.replace("trees", "sky");
       const stack = document.getElementById("trees");
-    stack.classList.add('tree')
-      addToInventory('tree')
+      stack.classList.add("trees");
+      addToInventory("trees");
     }
-    
   }
   if (typeClass.contains("rocks")) {
     if (selectedTool === "pickaxe") {
       e.target.classList.replace("rocks", "sky");
       const stack = document.getElementById("rocks");
-    stack.classList.add('rocks')
-    addToInventory('rocks')
+      stack.classList.add("rocks");
+      addToInventory("rocks");
     }
   }
 }

@@ -5,11 +5,9 @@ import { tilesAfterStacks } from "./tilesAfterStacks.js";
 export const handleClick = (e) => {
   if (select === "tool") {
     tileAfterTool(e);
-
   }
 
-if(select === 'stack'){
-  tilesAfterStacks(e)
-}
-}
-
+  if (select === "stack") {
+    tilesAfterStacks(e);
+  }
+};
