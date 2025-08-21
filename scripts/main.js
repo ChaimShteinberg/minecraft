@@ -1,5 +1,5 @@
 import { selectTool } from "./tools.js";
-import { handleMining } from "./tiles.js";
+import { handleMining } from "./tilesAfterStacks.js";
 import { placeTile, getInventory } from "./stacks.js";
 import { selectedTool } from "./tools.js";
 import { handleClick } from "./tiles.js";
