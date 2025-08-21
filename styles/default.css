@@ -49,12 +49,16 @@ article{
 }
 .rocks{
     background: url('../assets/images/stone.webp');
-    height: 48px;
-    width: 48px;
+
+     height: 48px;
+width: 48px;
+
     background-size: contain;
 }
 .tree{
     background:url('../assets/images/tree.webp') ;
-    height: 48px;
+
+     height: 48px;
     width: 48px;
 }
+
