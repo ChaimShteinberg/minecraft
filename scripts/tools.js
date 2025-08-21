@@ -1,4 +1,4 @@
-let selectedTool = null;
+export let selectedTool = null;
 
 export function selectTool(toolType) {
     selectedTool = toolType;
