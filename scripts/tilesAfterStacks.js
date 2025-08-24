@@ -27,11 +27,10 @@ function removeTile(tile, type) {
 
 export function tilesAfterStacks(event) {
   const tile = event.target;
-  if (!tile.classList.contains("tile")) return
+  if (!tile.classList.contains("sky")) return
 
   if (placingType) {
     placeTile(tile, placingType);
-    // placingType = null;
   } else {
     handleMining(tile);
   }

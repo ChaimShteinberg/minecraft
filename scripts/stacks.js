@@ -22,9 +22,12 @@ export function updateStacksUI() {
 }
 
 export function placeTile(tile, type) {
-  if (inventory[type].length === 0){ 
-    const stack = document.getElementById(type)
+    if(inventory[type].length === 1){
+         const stack = document.getElementById(type)
     stack.classList.replace(type,'sky')
+    }
+  if (inventory[type].length === 0){ 
+   
     return;
 }
   tile.className = `tile ${type}`;
