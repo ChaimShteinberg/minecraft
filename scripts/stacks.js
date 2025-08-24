@@ -24,7 +24,7 @@ export function updateStacksUI() {
 export function placeTile(tile, type) {
     if(inventory[type].length === 1){
          const stack = document.getElementById(type)
-    stack.classList.replace(type,'sky')
+    stack.classList.remove(type)
     }
   if (inventory[type].length === 0){ 
    
